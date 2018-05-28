@@ -1,12 +1,14 @@
 # REWEIGHTED PROBABILISTIC MODELS
 
-Reference implementation of Reweighted Probabilistic Models 
+Reference implementation of 
+*Robust Probabilistic Modeling with Bayesian Data Reweighting.*
+[[arxiv](https://arxiv.org/abs/1606.03860)]
 
 
 This folder contains code to replicate:
 
-**Figure 2a:** empirical study on a Poisson model with corrupted observations
++ empirical study on a Poisson model with corrupted observations
 
-**Figure 3b:** empirical study on a Generalized Linear model with missing latent groups. The code illustrates the use of Dirichlet prior on weights in the example. It produces a similar figure to Figure 3b (beta prior).
++ empirical study on a Generalized Linear model with missing latent groups. The code illustrates the use of Dirichlet prior on weights in the example. 
 
-**Figure 4:** empirical study on a Gaussian Mixture model with skewed distributions
++ empirical study on a Gaussian Mixture model with skewed distributions
