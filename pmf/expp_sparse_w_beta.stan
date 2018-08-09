@@ -28,8 +28,6 @@ model {
   # temporary variables
   row_vector[K] thetasum;
   row_vector[K] betasum;
-  real target;
-  target <- 0;
 
   for (k in 1:K) {
     thetasum[k] <- 0; betasum[k] <- 0;
@@ -42,7 +40,7 @@ model {
 
   # likelihood (see Eq (3) of GopalanHofmanBlei 2013)
   for (entry in 1:number_entries) {
-    target <- target + 
+    target +=
       w[user_index[entry]] * (
       log(dot_product(theta[user_index[entry]],beta[item_index[entry]]))
       -
@@ -54,6 +52,5 @@ model {
   for (i in 1:I)
     betasum <- betasum + beta[i];
 
-  target <- target -1*dot_product(thetasum,betasum);
-  increment_log_prob(target);
+  target += -1*dot_product(thetasum,betasum);
 }
